@@ -5,6 +5,10 @@ footer {
   font-size: 12px;
 } 
 
+body {
+  background-color: #f4dce0;
+}
+
 .toast {
     /* dirty: below 'card' button  */
     position: fixed; 
