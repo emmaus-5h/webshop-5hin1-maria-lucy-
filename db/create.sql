@@ -50,3 +50,12 @@ CREATE TABLE category (
 -- insert into products (name, description, code, price, rating) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 6, 3.5);
 -- insert into products (name, description, code, price, rating) values ('erasable pen', "pen that can erase it's tracks, especially usefull to those that make a LOT of mistakes." 492662523-7, 4, 5);
 
+
+insert into products (name, description, code, price) values ('gel ink retractable ballpoint pen‐ 0.5mm', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11);
+insert into products (name, description, code, price) values ('gel ink ballpoint pen 0.7mm', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
+insert into products (name, description, code, price) values ('calligraphy pen', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
+insert into products (name, description, code, price) values ('6‐in‐1 colour pen', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
+insert into products (name, description, code, price) values ('triangular 3 colour ballpoint pen', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14);
+insert into products (name, description, code, price) values ('erasable pen', 'pen that can erase it tracks, especially usefull to those that make a LOT of mistakes.', '077030122-3', 11);
+insert into products (name, description, code, price) values ('polycarbonate pen 0.7', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
+insert into products (name, description, code, price) values ('gel ink retractable ballpoint pen ‐ set of 10 (0.5mm)', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
