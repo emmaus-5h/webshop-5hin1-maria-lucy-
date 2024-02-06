@@ -59,3 +59,4 @@ insert into products (name, description, code, price) values ('triangular 3 colo
 insert into products (name, description, code, price) values ('erasable pen', 'pen that can erase it tracks, especially usefull to those that make a LOT of mistakes.', '077030122-3', 11);
 insert into products (name, description, code, price) values ('polycarbonate pen 0.7', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
 insert into products (name, description, code, price) values ('gel ink retractable ballpoint pen ‐ set of 10 (0.5mm)', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
+insert into products (name, description, code, price) values ('0.5M Mechanical Pencil', '.', '077030122-3', 1.50);
