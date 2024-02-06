@@ -44,13 +44,11 @@ CREATE TABLE category (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
--- insert into products (name, description, code, price, rating) values ('ballpoint pen', 'juicy pen suitable for everyone, recommended for students.', '816905633-0', 1, 5);
--- insert into products (name, description, code, price, rating) values ('ink pen', 'a fancy pen fancied by professors, however commoners can also use it.', '077030122-3', 2, 4.5);
--- insert into products (name, description, code, price, rating) values ('gel pen', 'a smooth pen with fun colour variants, great for kids or people with nostalgia.', '693155505-7', 1.50, 4);
--- insert into products (name, description, code, price, rating) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 6, 3.5);
--- insert into products (name, description, code, price, rating) values ('erasable pen', "pen that can erase it's tracks, especially usefull to those that make a LOT of mistakes." 492662523-7, 4, 5);
-
-
+insert into products (name, description, code, price) values ('ballpoint pen', 'juicy pen suitable for everyone, recommended for students.', '816905633-0', 1);
+insert into products (name, description, code, price) values ('ink pen', 'a fancy pen fancied by professors, however commoners can also use it.', '077030122-3', 2);
+insert into products (name, description, code, price) values ('gel pen', 'a smooth pen with fun colour variants, great for kids or people with nostalgia.', '693155505-7', 1.50);
+insert into products (name, description, code, price) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 6);
+insert into products (name, description, code, price) values ('erasable pen', "pen that can erase it's tracks, especially usefull to those that make a LOT of mistakes." 492662523-7, 4);
 insert into products (name, description, code, price) values ('gel ink retractable ballpoint pen‐ 0.5mm', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11);
 insert into products (name, description, code, price) values ('gel ink ballpoint pen 0.7mm', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
 insert into products (name, description, code, price) values ('calligraphy pen', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);

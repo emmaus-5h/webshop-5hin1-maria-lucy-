@@ -200,6 +200,16 @@ for a "Simple inventory list example with crud using : NodeJS, express framework
 - Robert Bakker [Notalifeform](https://www.gihub.com/Notalifeform)<br>
 for help almost 24x7 with many questions and problems and providing basic shop called gitpodnode to be further developed by students on gitpod and deplyed freely on heroku. See https://gitpod.io/#https://github.com/Notalifeform/gitpodnode
 
-
-
-
+# api en web
+- aanpassen api, videos op informatica.emmauscollege
+regel: app.get('/api/products', getProducts)
+api products geeft aan waar de webpagina de vraag aan de api stelt
+getProducts geeft de code die vraag aanvraagt
+in getProducts staat de query voor de db
+vraag gestelt aan de db door de api
+query aanpassen zodat er meer velden gevraagd worden bij api (met AS of JOIN)
+JOIN bij 1:n
+- aanpassen web, videos
+onder de regel 'template for product info'
+template wordt gekopieerd voor elk product
+dingen toevoegen in de template + goede waarden uit de api 
