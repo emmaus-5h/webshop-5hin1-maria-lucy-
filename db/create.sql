@@ -50,20 +50,16 @@ CREATE TABLE colors (
 --
 
 --pens and pencils
-insert into products (name, description, code, price) values ('ballpoint pen', 'juicy pen suitable for everyone, recommended for students.', '816905633-0', 1);
-insert into products (name, description, code, price) values ('ink pen', 'a fancy pen fancied by professors, however commoners can also use it.', '077030122-3', 2);
-insert into products (name, description, code, price) values ('gel pen', 'a smooth pen with fun colour variants, great for kids or people with nostalgia.', '693155505-7', 1.50);
-insert into products (name, description, code, price) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 6);
-insert into products (name, description, code, price) values ('erasable pen', "pen that can erase it's tracks, especially usefull to those that make a LOT of mistakes." 492662523-7, 4);
-insert into products (name, description, code, price) values ('gel ink retractable ballpoint pen‐ 0.5mm', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11);
-insert into products (name, description, code, price) values ('gel ink ballpoint pen 0.7mm', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('calligraphy pen', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('6‐in‐1 colour pen', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('triangular 3 colour ballpoint pen', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14);
-insert into products (name, description, code, price) values ('erasable pen', 'pen that can erase it tracks, especially usefull to those that make a LOT of mistakes.', '077030122-3', 11);
-insert into products (name, description, code, price) values ('polycarbonate pen 0.7', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('gel ink retractable ballpoint pen ‐ set of 10 (0.5mm)', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('0.5M mechanical Pencil', '.', '077030122-3', 1.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('ballpoint pen', 'juicy pen suitable for everyone, recommended for students.', '816905633-0', 1, 1, 1, 2, 1);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('gel pen', 'a smooth pen with fun colour variants.', '693155505-7', 1, 1, 2, 1, 2);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 1, 1, 3, 2, 2.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('erasable pen', "pen that can erase it's tracks, especially usefull to those that make a LOT of mistakes." 492662523-7, 6, 1, 4, 2, 3);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('calligraphy pen', 'for pretty letters and the artists.', '693155505-7', 1, 1, 1, 1, 3);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('3 colour ballpoint pen', 'three colours: blue, black and red. what else does a person need.', '492662523-7', 1, 1, 2, 2, 2.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('erasable pen', 'pen that can erase it tracks, especially usefull to those that make a LOT of mistakes.', '077030122-3', 11);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('polycarbonate pen', 'a pen with advanced oil for advanced people.', '445924201-X', 1, 1, 2, 1, 2);
+insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('10 gel pens', 'a lot of pens FOR THE WHOLE FAMILY', '693155505-7', 1, 1, 2, 2, 13.50);
+
 --notebooks
 --erasers
 --scissors
@@ -76,7 +72,7 @@ insert into brands (name, description, target_audience) values ('bic', 'bic sell
 insert into brands (name, description, target_audience) values ('sakura', 'sakura sells stationery', 'students');
 insert into brands (name, description, target_audience) values ('hema', 'hema sells stationery', 'children');
 insert into brands (name, description, target_audience) values ('stabilo', 'stabilo sells pens', 'children');
-
+insert into brands (name, description, target_audience) values ('pilot', 'pilot sells stuff', 'students');
 
 insert into ratings (title, rating_text, number_rating) values ('5 star', '5 stars i love love loveeee this', 5);
 insert into ratings (title, rating_text, number_rating) values ('alright pens', 'welllll its okaokaokao', 4);
@@ -86,13 +82,13 @@ insert into ratings (title, rating_text, number_rating) values ('terrible pens',
 insert into ratings (title, rating_text, number_rating) values ('okay', '3 stars', 3);
 
 
-insert into categories (name, description) values ('notebooks', 'notebooks are amazing');
 insert into categories (name, description) values ('pens', 'pens are handy dandy');
 insert into categories (name, description) values ('pencils', 'pencils pencils good for drawing');
 insert into categories (name, description) values ('eraser', 'erasers');
 insert into categories (name, description) values ('scrissors', 'sharp oh sharp scissorsssrsrs');
 insert into categories (name, description) values ('rulers', 'rulers are straight');
 insert into categories (name, description) values ('staplers', 'staplers are handy yippe');
+insert into categories (name, description) values ('notebooks', 'notebooks are amazing');
 
 
 insert into colors (name_color, hex_color) values ('black', '#000000');
