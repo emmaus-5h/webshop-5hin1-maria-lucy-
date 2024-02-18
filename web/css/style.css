@@ -6,7 +6,7 @@ footer {
 } 
 
 body {
-  background-color: #c7c2c2;
+  background-color: #c0bfbf;
 }
 
 .toast {
@@ -20,6 +20,7 @@ body {
 .shop-button {
   font-size: 15px;
   margin-top: -4px;
+  color: #e252ff;
 }
 
 .article-container {
