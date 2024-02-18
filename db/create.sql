@@ -10,7 +10,6 @@ CREATE TABLE products (
   brand_id INTEGER,
   category_id INTEGER,
   rating_id INTEGER,
-  color_id INTEGER,
   price NUMERIC(10, 2)
 );
 
@@ -40,6 +39,12 @@ CREATE TABLE colors (
   hex_color TEXT
 );
 
+CREATE TABLE product_colors ( 
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  product_id INTEGER,
+  color_id INTEGER
+);
+
 --
 -- populate with data
 --
@@ -50,44 +55,44 @@ CREATE TABLE colors (
 --
 --products
 --pens
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('ballpoint pen', 'juicy pen suitable for everyone, recommended for students.', '816905633-0', 1, 1, 1, 2, 1);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('gel pen', 'a smooth pen with fun colour variants.', '693155505-7', 1, 1, 2, 1, 2);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 1, 1, 3, 2, 2.50);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('erasable pen', 'pen that can erase its tracks, especially usefull to those that make a LOT of mistakes.', '492662523-7', 5, 1, 4, 2, 3);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('calligraphy pen', 'for pretty letters and the artists.', '693155505-7', 1, 1, 1, 1, 3);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('3 colour ballpoint pen', 'three colours: blue, black and red. what else does a person need.', '492662523-7', 1, 1, 2, 2, 2.50);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('polycarbonate pen', 'a pen with advanced oil for advanced people.', '445924201-X', 1, 1, 2, 1, 2);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('10 gel pens', 'a lot of pens FOR THE WHOLE FAMILY', '693155505-7', 1, 1, 2, 2, 13.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('ballpoint pen', 'juicy pen suitable for everyone, recommended for students.', '816905633-0', 1, 1, 1, 1);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('gel pen', 'a smooth pen with fun colour variants.', '693155505-7', 1, 1, 2, 2);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('multi-colour pen', 'pen with 6 different colours, easily switchable.', '686928463-6', 1, 1, 3, 2.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('erasable pen', 'pen that can erase its tracks, especially usefull to those that make a LOT of mistakes.', '492662523-7', 5, 1, 4, 3);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('calligraphy pen', 'for pretty letters and the artists.', '693155505-7', 1, 1, 1, 3);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('3 colour ballpoint pen', 'three colours: blue, black and red. what else does a person need.', '492662523-7', 1, 1, 2, 2.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('polycarbonate pen', 'a pen with advanced oil for advanced people.', '445924201-X', 1, 1, 2, 2);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('10 gel pens', 'a lot of pens FOR THE WHOLE FAMILY', '693155505-7', 1, 1, 2, 13.50);
 
 --pencils
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('40 mechanical pencils', 'a LOT of pencils, pastel edition!', '492662523-7', 2, 2, 1, 4, 20);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('mechanical pencil', 'a pencil with a mechanical tip, for those who like to draw.', '445924201-X', 7, 2, 2, 1, 5);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('ergonomic pencil', 'a pencil with ergonomic grip, good for kids that are learning to write', '816905633-0', 4, 2, 1, 4, 1.50);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('graphite pencil', 'a pencil with the level H', '816905633-0', 7, 2, 1, 5, 1);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('40 mechanical pencils', 'a LOT of pencils, pastel edition!', '492662523-7', 2, 2, 1, 20);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('mechanical pencil', 'a pencil with a mechanical tip, for those who like to draw.', '445924201-X', 7, 2, 2, 5);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('ergonomic pencil', 'a pencil with ergonomic grip, good for kids that are learning to write', '816905633-0', 4, 2, 1, 1.50);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('graphite pencil', 'a pencil with the level H', '816905633-0', 7, 2, 1, 1);
 
 --erasers
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('electric eraser', 'an electric eraser that can erase anything.', '071695235-0', 3, 3, 1, 1, 12);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('sumo grip eraser', 'EXTREMELY strong eraser. recommended for those who are not good at erasing.', '071695235-0', 3, 3, 1, 2, 3);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('4 erasers', '4 erasers should be enough to last a schoolyear, right?', '071695235-0', 6, 3, 2, 2, 5);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('kneaded eraser', 'an eraser you can knead to fit any form.', '071695235-0', 7, 3, 3, 11, 2);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('eraser with grip', 'a good eraser if you need extra grip', '071695235-0', 2, 3, 2, 9, 2);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('electric eraser', 'an electric eraser that can erase anything.', '071695235-0', 3, 3, 1, 12);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('sumo grip eraser', 'EXTREMELY strong eraser. recommended for those who are not good at erasing.', '071695235-0', 3, 3, 1, 3);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('4 erasers', '4 erasers should be enough to last a schoolyear, right?', '071695235-0', 6, 3, 2, 5);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('kneaded eraser', 'an eraser you can knead to fit any form.', '071695235-0', 7, 3, 3, 2);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('eraser with grip', 'a good eraser if you need extra grip', '071695235-0', 2, 3, 2, 2);
 
 --scissors
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('small scissors with a ruler', 'some small scissors with a ruler, good for kids', '071695235-0', 8, 4, 2, 9, 4);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('all purpose scissors', 'scissors suitable for everyone', '071695235-0', 8, 4, 1, 4, 5);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('small scissors', 'small scissors, good to fit in a pencilcase.', '071695235-0', 1, 4, 3, 2, 4);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('portable scissors', 'even smaller scissors that are easily transportable.', '071695235-0', 1, 4, 3, 2, 6);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('small scissors with a ruler', 'some small scissors with a ruler, good for kids', '071695235-0', 8, 4, 2, 4);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('all purpose scissors', 'scissors suitable for everyone', '071695235-0', 8, 4, 1, 5);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('small scissors', 'small scissors, good to fit in a pencilcase.', '071695235-0', 1, 4, 3, 4);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('portable scissors', 'even smaller scissors that are easily transportable.', '071695235-0', 1, 4, 3, 6);
 
 --rulers
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('acrylic ruler', 'a nice good acrylic ruler.', '071695235-0', 1, 5, 1, 2, 3);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('shatterproof rulers', 'a 4 pack of colourfull shatterproof rulers.', '071695235-0', 2, 5, 2, 2, 13);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('wooden ruler', 'a wooden ruler made from hardwood finished with a nice finish.', '071695235-0', 8, 5, 1, 10, 5);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('acrylic ruler', 'a nice good acrylic ruler.', '071695235-0', 1, 5, 1, 3);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('shatterproof rulers', 'a 4 pack of colourfull shatterproof rulers.', '071695235-0', 2, 5, 2, 13);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('wooden ruler', 'a wooden ruler made from hardwood finished with a nice finish.', '071695235-0', 8, 5, 1, 5);
 
 --notebooks
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('a4 notebook', 'a notebook for taking notebooks.', '071695235-0', 8, 6, 1, 1, 10);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('5 multicoloured notebooks', '5 notebooks, each with a different colour.', '071695235-0', 1, 6, 2, 2, 15);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('a4 notepad', 'a notepad suitable for taking quick notes.', '071695235-0', 6, 6, 1, 2, 4);
-insert into products (name, description, code, brand_id, category_id, rating_id, color_id, price) values ('a5 notebook', 'great for mathematicians because of the square grid.', '071695235-0', 7, 6, 1, 2, 10);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('a4 notebook', 'a notebook for taking notebooks.', '071695235-0', 8, 6, 1, 10);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('5 multicoloured notebooks', '5 notebooks, each with a different colour.', '071695235-0', 1, 6, 2, 15);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('a4 notepad', 'a notepad suitable for taking quick notes.', '071695235-0', 6, 6, 1, 4);
+insert into products (name, description, code, brand_id, category_id, rating_id, price) values ('a5 notebook', 'great for mathematicians because of the square grid.', '071695235-0', 7, 6, 1, 10);
 
 
 insert into brands (name, description, target_audience) values ('muij', 'muij sells stationery', 'students');
@@ -126,3 +131,74 @@ insert into colors (name_color, hex_color) values ('purple', '#800080');
 insert into colors (name_color, hex_color) values ('pink', '#FFC0CB');
 insert into colors (name_color, hex_color) values ('brown', '#A52A2A');
 insert into colors (name_color, hex_color) values ('gray', '#808080');
+
+
+insert into product_colors (product_id, color_id) values (1, 2);
+insert into product_colors (product_id, color_id) values (1, 4);
+insert into product_colors (product_id, color_id) values (2, 1);
+insert into product_colors (product_id, color_id) values (2, 2);
+insert into product_colors (product_id, color_id) values (2, 3);
+insert into product_colors (product_id, color_id) values (2, 4);
+insert into product_colors (product_id, color_id) values (2, 5);
+insert into product_colors (product_id, color_id) values (2, 6);
+insert into product_colors (product_id, color_id) values (2, 7);
+insert into product_colors (product_id, color_id) values (2, 8);
+insert into product_colors (product_id, color_id) values (2, 9);
+insert into product_colors (product_id, color_id) values (3, 2);
+insert into product_colors (product_id, color_id) values (3, 3);
+insert into product_colors (product_id, color_id) values (3, 4);
+insert into product_colors (product_id, color_id) values (3, 5);
+insert into product_colors (product_id, color_id) values (3, 9);
+insert into product_colors (product_id, color_id) values (4, 1);
+insert into product_colors (product_id, color_id) values (5, 1);
+insert into product_colors (product_id, color_id) values (6, 1);
+insert into product_colors (product_id, color_id) values (6, 2);
+insert into product_colors (product_id, color_id) values (6, 3);
+insert into product_colors (product_id, color_id) values (6, 4);
+insert into product_colors (product_id, color_id) values (7, 1);
+insert into product_colors (product_id, color_id) values (7, 2);
+insert into product_colors (product_id, color_id) values (8, 1);
+insert into product_colors (product_id, color_id) values (8, 2);
+insert into product_colors (product_id, color_id) values (9, 4);
+insert into product_colors (product_id, color_id) values (9, 8);
+insert into product_colors (product_id, color_id) values (9, 9);
+insert into product_colors (product_id, color_id) values (10, 1);
+insert into product_colors (product_id, color_id) values (11, 3);
+insert into product_colors (product_id, color_id) values (11, 4);
+insert into product_colors (product_id, color_id) values (12, 5);
+insert into product_colors (product_id, color_id) values (13, 1);
+insert into product_colors (product_id, color_id) values (13, 3);
+insert into product_colors (product_id, color_id) values (14, 1);
+insert into product_colors (product_id, color_id) values (14, 2);
+insert into product_colors (product_id, color_id) values (14, 3);
+insert into product_colors (product_id, color_id) values (15, 2);
+insert into product_colors (product_id, color_id) values (15, 4);
+insert into product_colors (product_id, color_id) values (16, 11);
+insert into product_colors (product_id, color_id) values (17, 9);
+insert into product_colors (product_id, color_id) values (18, 9); 
+insert into product_colors (product_id, color_id) values (18, 11);
+insert into product_colors (product_id, color_id) values (19, 4);
+insert into product_colors (product_id, color_id) values (19, 11);
+insert into product_colors (product_id, color_id) values (20, 2); 
+insert into product_colors (product_id, color_id) values (20, 11);
+insert into product_colors (product_id, color_id) values (21, 2);
+insert into product_colors (product_id, color_id) values (21, 11);
+insert into product_colors (product_id, color_id) values (22, 2);
+insert into product_colors (product_id, color_id) values (22, 11);
+insert into product_colors (product_id, color_id) values (23, 2);
+insert into product_colors (product_id, color_id) values (23, 3);
+insert into product_colors (product_id, color_id) values (23, 5);
+insert into product_colors (product_id, color_id) values (23, 6);
+insert into product_colors (product_id, color_id) values (24, 10);
+insert into product_colors (product_id, color_id) values (25, 1);
+insert into product_colors (product_id, color_id) values (26, 1);
+insert into product_colors (product_id, color_id) values (26, 3);
+insert into product_colors (product_id, color_id) values (26, 4);
+insert into product_colors (product_id, color_id) values (26, 5);
+insert into product_colors (product_id, color_id) values (26, 6);
+insert into product_colors (product_id, color_id) values (26, 10);
+insert into product_colors (product_id, color_id) values (26, 11);
+insert into product_colors (product_id, color_id) values (27, 2);
+insert into product_colors (product_id, color_id) values (27, 4);
+insert into product_colors (product_id, color_id) values (28, 2);
+insert into product_colors (product_id, color_id) values (28, 4);
