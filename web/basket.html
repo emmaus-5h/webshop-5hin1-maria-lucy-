@@ -28,12 +28,12 @@
         <!-- inhoud winkelwagen -->
         <div class="container" id="index">
           <h4>winkelwagen</h4>
-          <p>Hier zie je de lijst met artikelen uit je winkelwagen.</p>
-          <p>Door op plus en min te drukken kun je het aantal per artikel aanpassen</p>   
+          <p>hier zie je de lijst met artikelen uit je winkelwagen.</p>
+          <p>door op plus en min te drukken kun je het aantal per artikel aanpassen</p>   
           <!-- melding die wordt getoond als je winkelwagen leeg is -->
           <div id="show_when_empty_basket">
           <div class="alert alert-info" > 
-            Je winkelwagen is leeg. 
+            je winkelwagen is leeg. 
           </div>
           </div>
           <!-- template for product info-->
@@ -45,9 +45,9 @@
             </div>
             <div class="card-body">
               <ul class="product-properties">
-                <li><span class="propert-name">Id:</span><span class="product_id_show"></span></li>
-                <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
-                <li><span class="propert-name">Aantal:</span><span class="product_amount_show"></span></li>
+                <li><span class="propert-name">id:</span><span class="product_id_show"></span></li>
+                <li><span class="propert-name">prijs:</span><span class="product_price"></span></li>
+                <li><span class="propert-name">aantal:</span><span class="product_amount_show"></span></li>
               </ul>
               <!-- input field needed as parameter for + and - -->
               <input class="product_amount" name="deltaAmount" value="1" type="hidden">
@@ -65,18 +65,18 @@
 
          <!-- totaal bedrag winkelwagen en knop voor Winkelwagen legen en knop voor Verder winkelen-->
         <div class="container" id="totaal">
-            <p>Totaal bedrag: € <span class="sum_products">0.00</span></p>
+            <p>totaal bedrag: € <span class="sum_products">0.00</span></p>
             <p>
-              <button class="btn btn-outline-dark shop-button" onClick="if(confirm('Winkelwagen legen?')) { emptyBasket(); location.href='basket.html' }">Winkelwagen legen</button> <!-- beetje lomp om hele pagina opnieuw te laden na legen -->
+              <button class="btn btn-outline-dark shop-button" onClick="if(confirm('Winkelwagen legen?')) { emptyBasket(); location.href='basket.html' }">winkelwagen legen</button> <!-- beetje lomp om hele pagina opnieuw te laden na legen -->
               <button class="btn btn-outline-dark shop-button" onClick="location.href='index.html'">Verder winkelen</button>
             </p>
         </div>
 
         <!-- bestelformulier -->
         <form class="container" id="orderForm">
-          <h4>Vul hieronder je adresgegevens in</h4>
+          <h4>vul hieronder je adresgegevens in</h4>
           <div class="form-group">
-            <label for="naam">Naam</label>
+            <label for="naam">naam</label>
               <input required
                      class="form-control"
                      name="name" 
@@ -85,7 +85,7 @@
                      onchange="this.setCustomValidity('')">
           </div>
           <div class="form-group">
-            <label for="adres">Adres</label>
+            <label for="adres">adres</label>
             <input required 
                    class="form-control"
                    name="adres" 
@@ -94,7 +94,7 @@
                    onchange="this.setCustomValidity('')">
           </div>
           <div class="form-group">
-            <label for="postcode">Postcode</label>
+            <label for="postcode">postcode</label>
             <input required 
                    class="form-control"
                    name="postcode" 
@@ -103,7 +103,7 @@
                    onchange="this.setCustomValidity('')">
           </div>
           <div class="form-group">
-            <label for="plaats">Woonplaats</label>
+            <label for="plaats">woonplaats</label>
             <input required 
                    class="form-control"
                    name="plaats" 
@@ -112,7 +112,7 @@
                    onchange="this.setCustomValidity('')">
           </div>
           <div>
-            <label for="email">Email</label>
+            <label for="email">email</label>
             <input required
                    class="form-control"
                    type="email" 
@@ -122,7 +122,7 @@
                    onchange="this.setCustomValidity('')">
           </div>
           <div>
-            <label for="phone">Mobiel</label>
+            <label for="phone">mobiel</label>
             <input required 
                    class="form-control"
                    type="tel" 
@@ -133,22 +133,22 @@
                    onchange="this.setCustomValidity('')">
           </div>
           <p>...en klik op bestellen<p>
-          <p>Als ik je bestelling gezien heb, dan ontvang je van mij een Tikkie. Zodra je betaald hebt, stuur ik de spullen op.</p>
-          <button type="button" class="btn btn-outline-success shop-button" onclick="checkout()">Bestellen</button>
+          <p>als ik je bestelling gezien heb, dan ontvang je van mij een tikkie. zodra je betaald hebt, stuur ik de spullen op.</p>
+          <button type="button" class="btn btn-outline-success shop-button" onclick="checkout()">bestellen</button>
         </form>
         
         <!-- bevestiging van bestelling -->
         <div class="container" id="checkout_status">
              <template id="checkout_success">
                <div class="alert alert-success"> 
-                 Je bestelling is geplaatst en een bevestigingsmail is verzonden.<br>
-                 Je ordernummer is <span class="checkout_ordernumber"></span> 
+                 je bestelling is geplaatst en een bevestigingsmail is verzonden.<br>
+                 je ordernummer is <span class="checkout_ordernumber"></span> 
                </div>
              </template>
              <template id="checkout_failes">
                <div class="alert alert-danger">
-                 Je bestelling kon niet worden geplaatst, neem contact op met de shop<br>
-                 Foutmelding:<br>
+                 je bestelling kon niet worden geplaatst, neem contact op met de shop<br>
+                 foutmelding:<br>
                  <span class="checkout_error_message"></span>
                </div>
              </template>
@@ -157,7 +157,7 @@
     </main>
     <footer>
       <hr>
-      <p>Deze website is gemaakt door <naam leerling> voor het vak informatica op het Emmauscollege Rotterdam. Laatste bijgewerkt 1 oktober 2020.</p>
+      <p>deze website is gemaakt door <naam leerling> voor het vak informatica op het Emmauscollege Rotterdam. laatste bijgewerkt 1 oktober 2020.</p>
     </footer>
 
     <script src="/js/basket.js"></script>
